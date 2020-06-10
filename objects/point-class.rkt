@@ -23,4 +23,3 @@
 (send a-pt rotate 90)
 (send a-pt get-x)
 (send a-pt get-y)
-

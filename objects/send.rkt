@@ -18,7 +18,6 @@
   (let ([obj obj-expr])
     ((lookup-method obj 'method) obj args ...)))
 
-
 #;
 (define-syntax (send stx)
   (syntax-parse stx
