@@ -100,7 +100,7 @@ Practice: [30 min]
 
 QL, part 1: [1 hour]
 
- In "ql", "house.ql" should our ultimate target, while "house.rkt"
+ In "ql", "house.ql" is our ultimate target, while "house.rkt"
   shows a parenthesized form of the language that we'll build up to
   first.
 

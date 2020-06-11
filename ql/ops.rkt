@@ -25,6 +25,7 @@
     (and (number? a) 
          (number? b)
          (x a b))))
+
 (define-comp-coerce </coerce <)
 (define-comp-coerce >/coerce >)
 (define-comp-coerce =/coerce =)

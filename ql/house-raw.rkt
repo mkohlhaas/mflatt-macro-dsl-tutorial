@@ -34,7 +34,7 @@
 (define hasMaintLoan undefined)
 (gui-add! Box1HouseOwning
           boolean-widget
-          "Did you buy a house in 2010?"
+          "Did you take a maintenance loan in 2010?"
           (lambda () #t) ; guard
           (lambda (v) (set! hasMaintLoan v))
           #f)

@@ -4,8 +4,7 @@
 
 (define point-class
   (class [x y] ; fields
-    this ; name that refers back to self
-    (define (get-x) x)
+    (define (get-x) x) ; methods
     (define (get-y) y)
     (define (set-x v) (set! x v))
     (define (set-y v) (set! y v))
