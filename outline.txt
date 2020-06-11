@@ -108,12 +108,27 @@ QL, part 1: [1 hour]
   system for QL. The "house-0-raw.rkt" module uses those directly to
   produce the same result as "house.rkt". We'll write macros that
   implement "house.rkt" as "house-0-raw.rkt".
-  "house-0-raw.rkt" is our starting point, "house.rkt" is our goal!
+
+  OVERVIEW of the SEQUENCE OF EXERCISES:
+
+  "house-0-raw.rkt" is our starting point, "house.rkt" is our goal in s-expr form!
+  For the beginning exercises they serve only as an outline how we want to progress.
+  After that we create our own real programming language with lexer and parser and call
+  it ql.
+
+  For "house-[1-7]*.rkt" write the corresponding macro versions "form-[1-7].rkt"!
+  The "form-[1-3].rkt" files replace the "house-[1-3].rkt" files and are executed
+  by themselves.
+  From house-4.rkt on we split language implementation from use. That means you
+  write "form-[4-7].rkt" files and execute the "house-[4-7].rkt" which include
+  the "form-[4-7].rkt" files.
 
  1. Implement `form` without guards or computed field values (which no
     particular syntax checks, for now).
 
-    The "house-1-raw.rkt" module provides a small example of what this
+    Write form-1.rkt! Execute it!
+
+    The "house-1.rkt" module provides a small example of what this
     version should express. The commented-out part should be at the
     end of a new "form-1.rkt" module, which you implement by importing
     "gui.rkt" and "op.rkt" and defining `form`.
@@ -122,7 +137,9 @@ QL, part 1: [1 hour]
 
  2. Support an optional expression to compute a field's value.
 
-    The "house-2-raw.rkt" module provides a small example of what this
+    Write form-2.rkt! Execute it!
+
+    The "house-2.rkt" module provides a small example of what this
     version should express.
 
     Hint: Change your `form-clause` helper to `form-clause*` with no
@@ -131,7 +148,9 @@ QL, part 1: [1 hour]
 
  3. Add support for guarded clauses via `when`.
 
-    See "house-3-raw.rkt".
+    Write form-3.rkt! Execute it!
+
+    See "house-3.rkt".
 
     Hint: The `form-clause` macro could use itself, especially if a
     guard expression is threaded through.
@@ -140,26 +159,34 @@ QL, part 1: [1 hour]
 
  4. Split the language implementation from use.
 
+    Write form-4.rkt! Execute house-4.rkt!
+
     Instead of a "form-4.rkt" that has both the macros and the use,
     have "form-4.rkt" be just the macros, and define "house-4.rkt" by
     importing from "form-4.rkt".
 
  5. [Together] Turn the `form` module into a language.
 
+    Write form-5.rkt Execute house-5.rkt!
+
     See "house-5.rkt".
 
  6. Syntactically check that form has an identifier, and check that
     each clause has an identifier and a question string.
+
+    Write form-6.rkt! Execute house-6.rkt!
 
     See "house-6.rkt".
 
  7. Constrain `when` use so that it is allowed only for guarding
     clauses.
 
+    Write form-7.rkt! Execute house-7.rkt!
+
     See "house-7.rkt".
 
-    Hint: export a `when*` as `when`, where `when*` always rasies
-    a syntax error
+    Hint: export a `when*` as `when`, where `when*` always raises
+    a syntax error.
 
 ----------------------------------------
 
