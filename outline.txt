@@ -105,14 +105,15 @@ QL, part 1: [1 hour]
   first.
 
  The "gui.rkt" and "ops.rkt" modules are effectively the runtime
-  system for QL. The "house-raw.rkt" module uses those directly to
+  system for QL. The "house-0-raw.rkt" module uses those directly to
   produce the same result as "house.rkt". We'll write macros that
-  implement "house.rkt" as "house-raw.rkt".
+  implement "house.rkt" as "house-0-raw.rkt".
+  "house-0-raw.rkt" is our starting point, "house.rkt" is our goal!
 
  1. Implement `form` without guards or computed field values (which no
     particular syntax checks, for now).
 
-    The "house-raw-1.rkt" module provides a small example of what this
+    The "house-1-raw.rkt" module provides a small example of what this
     version should express. The commented-out part should be at the
     end of a new "form-1.rkt" module, which you implement by importing
     "gui.rkt" and "op.rkt" and defining `form`.
@@ -121,7 +122,7 @@ QL, part 1: [1 hour]
 
  2. Support an optional expression to compute a field's value.
 
-    The "house-raw-2.rkt" module provides a small example of what this
+    The "house-2-raw.rkt" module provides a small example of what this
     version should express.
 
     Hint: Change your `form-clause` helper to `form-clause*` with no
@@ -130,7 +131,7 @@ QL, part 1: [1 hour]
 
  3. Add support for guarded clauses via `when`.
 
-    See "house-raw-3.rkt".
+    See "house-3-raw.rkt".
 
     Hint: The `form-clause` macro could use itself, especially if a
     guard expression is threaded through.
